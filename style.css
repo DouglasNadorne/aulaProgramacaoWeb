@@ -385,3 +385,40 @@ footer {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
+
+.success-message {
+    display: none;
+    padding: 10px;
+    background: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.success-message.show {
+    display: block;
+}
+/* ==========================
+   Ajustes para celular
+   ========================== */
+@media (max-width: 600px) {
+
+    .cta-buttons {
+        flex-direction: row; /* manter lado a lado */
+        gap: 0.7rem;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        flex: 1;
+        max-width: 160px; /* largura reduzida */
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem; /* texto menor */
+    }
+
+    .hero {
+        padding-top: 140px;
+        height: auto; /* evita cortar conteúdo */
+    }
+}
