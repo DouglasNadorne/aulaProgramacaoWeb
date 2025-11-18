@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Voluntários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+   <header>
+    <nav>
+        <div class="logo">&#128062; Adote um pet</div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+         <ul id="navMenu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pets.html" class="active">Animais para adoção</a></li>
+                <li><a href="doacao.html">Quero doar</a></li>
+            </ul>
+    </nav>
+    </header>
+
+   
+    <section class="hero hero-cadastro">
+        <div class="hero-content">
+            <h1>Um gesto de cuidado</h1>
+            <p>A responsabilidade pelo bem-estar dele é também um ato de amor — e seu gesto pode garantir que ele tenha uma vida feliz.</p>
+        </div>
+    </section>
+
+    <!-- Formulário de Cadastro -->
+    <main>
+        <section class="signup-section">
+            <h2>Cadastro</h2>
+          <div class="success-message" id="successMessage">
+                ✅ Cadastro realizado com sucesso!
+            </div>
+            <form id="doadorForm" onsubmit="handleSubmit(event)">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>                
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone *</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dados do animal</legend>
+                     <div class="form-group">
+                        <label for="nome">Nome do animal </label>
+                        <input type="text" id="nomeA" name="nomeA" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="idade">Idade do animal (anos) *</label>
+                        <input type="number" id="idade" name="idade" min="0" placeholder="Ex: 2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="especie">Espécie *</label>
+                        <select id="especie" name="especie" required>
+                            <option value="">Selecione...</option>
+                            <option value="cachorro">Cachorro</option>
+                            <option value="gato">Gato</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="passaro">Passaro</option>
+                            <option value="peixe">Peixe</option>
+                        </select>
+                    </div>
+                     <div class="form-group">
+                        <label for="caracteristicas">Caracteristicas do animal *</label>
+                        <textarea id="caracteristicas" name="caracteristicas" placeholder="Conte-nos sobre seu animal ..."></textarea>
+                    </div>
+                </fieldset>
+
+            
+
+                <button type="submit" class="btn-primary">Enviar Cadastro</button>
+            </form>
+           
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Organização de Voluntários. Todos os direitos reservados.</p>
+    <p>Feito com &#10084;&#65039; para transformar vidas</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
